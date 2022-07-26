@@ -1,0 +1,45 @@
+
+
+.page {
+  margin: 0;
+}
+
+.sidebar {
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 25vw;
+}
+
+.main {
+  background-color: green;
+  position: relative;
+  left: 25vw;
+  width: 75vw;
+  top: 0;
+}
+
+.header {
+  background-color: red;
+  position: relative;
+  top: 0;
+  height: 30vh;
+  width: 75vw;
+}
+
+.headerTitle {
+  position: fixed;
+  top: 0;
+  height: 0vh;
+  width: 75vw;
+}
+
+.fix {
+  position: fixed;
+  height: 20vh;
+}
+
+.offset {
+  top: 30vh;
+}
