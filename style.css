@@ -35,9 +35,18 @@
   width: 75vw;
 }
 
+.headerInfo {
+  position: relative;
+  padding-top: 10vh;
+}
+
+.headerInfoHide {
+  top: -100vh;
+}
+
 .fix {
   position: fixed;
-  height: 20vh;
+  height: 10vh;
 }
 
 .offset {
