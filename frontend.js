@@ -21,3 +21,5 @@ function stickyCheck() {
     main.classList.remove("offset")
   }
 }
+
+<script src="frontend.js"></script>

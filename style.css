@@ -5,50 +5,56 @@
 }
 
 .sidebar {
-  background-color: #fff;
+  background-color: #07d;
   position: fixed;
   left: 0;
   top: 0;
   width: 25vw;
+  z-index: 10;
+}
+
+.sidebarLogo {
+  position: relative;
+  left: 1vw;
+  top: 1vw;
+  width: 10vw;
+  z-index: 10;
+}
+
+.linksLogo {
+  position: relative;
+  left: 1vw;
+  top: -1vw;
+  width: 5vw;
+  z-index: 10;
 }
 
 .main {
-  background-color: green;
+  background-color: #0af;
   position: relative;
   left: 25vw;
   width: 75vw;
   top: 0;
+  padding-top: 7.5rem;
 }
 
 .header {
-  background-color: red;
-  position: relative;
-  top: 0;
-  height: 30vh;
-  width: 75vw;
-}
-
-.headerTitle {
+  background-color: #09f;
   position: fixed;
-  top: 0;
-  height: 0vh;
+  top: -5rem;
+  padding-top: 5rem;
+  height: 7.5rem;
   width: 75vw;
+  z-index: 5;
+  box-shadow: 0 0 1rem 1rem #09f;
+  text-align: center;
 }
 
-.headerInfo {
+.info {
+  background-color: #09f;
   position: relative;
-  padding-top: 10vh;
-}
-
-.headerInfoHide {
-  top: -100vh;
-}
-
-.fix {
-  position: fixed;
-  height: 10vh;
-}
-
-.offset {
-  top: 30vh;
+  height: 7.5rem;
+  width: 75vw;
+  padding-top: 2rem;
+  text-align: center;
 }
