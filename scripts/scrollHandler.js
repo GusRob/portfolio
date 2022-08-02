@@ -25,4 +25,6 @@ function scrollIndicator(){
 }
 
 
+
+
 var interval = setInterval(function(){scrollIndicator();}, 10);

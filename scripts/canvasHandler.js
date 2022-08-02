@@ -3,7 +3,11 @@ const context = canvas.getContext('2d');
 let mouse_x = 0;
 let mouse_y = 0;
 
-let count = 50;
+//dot formation
+
+var dotsX = [-0.18, -0.15, -0.12, -0.09, -0.06, -0.03,  0.02,  0.07,  0.10,  0.13,  0.16, 0.19, 0.22, -0.03, 0.06];
+var dotsY = [0.15,      0, -0.15, -0.30, -0.45, -0.60, -0.75, -0.60, -0.45, -0.30, -0.15,    0, 0.15, -0.10, -0.10];
+let count = dotsX.length;
 
 //DOT CONTROL
 
@@ -20,13 +24,16 @@ class Dot {
 }
 
 var dots = new Array(count);
+setDots();
 
-
-let i = 0;
-while(i < count){
-  dots[i] = new Dot(window.innerWidth/2 + 15*((count/2)-i), window.innerHeight*7/16, 5);
-  i++;
+function setDots(){
+  let i = 0;
+  while(i < count){
+    dots[i] = new Dot(window.innerWidth/2 + (dotsX[i] * window.innerWidth/10), window.innerHeight*5/16 + (dotsY[i] * window.innerHeight/10), 5);
+    i++;
+  }
 }
+
 
 function moveDots() {
   for(var i = 0; i < dots.length; i++) {
@@ -66,13 +73,14 @@ function moveDots() {
 function drawDots() {
   context.clearRect(0, 0, canvas.width, canvas.height);
   for(var i = 0; i < dots.length; i++) {
-    drawDot(context, dots[i].x, dots[i].y, dots[i].size);
+    drawDot(context, dots[i]);
   }
 }
 
-function drawDot(context, x, y, size) {
+function drawDot(context, dot) {
   context.beginPath();
-  context.arc(x, y, size, 0, 2 * Math.PI, false);
+  context.arc(dot.x, dot.y, dot.size, 0, 2 * Math.PI, false);
+  var val = ((dot.startX - 400)/400)%1000;
   context.fillStyle = '#fa0';
   context.fill();
   context.lineWidth = 1;

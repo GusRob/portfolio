@@ -32,7 +32,7 @@
 
 #name {
   align-self: center;
-  margin: 0;
+  margin: 30vh 0;
   text-align: center;
   color: white;
   width: 100vw;
@@ -67,7 +67,7 @@ h1 {
 }
 
 .darkenFilter{
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
 
 .fitToParent {
@@ -93,4 +93,5 @@ h1 {
 .page {
   margin: 0;
   scroll-snap-type: y mandatory;
+  background-color: #fda;
 }
