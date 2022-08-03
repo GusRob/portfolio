@@ -1,9 +1,11 @@
 var scrollIndicatorUp = document.getElementById("scrollUp");
 var scrollIndicatorDown = document.getElementById("scrollDown");
 
-var noOfPages = 4
+var noOfPages = 6
 
-var positionOnPage = [0, -1, 0, 0];
+var positionOnPage = [0, -1, 1, -1, 1, 0];
+
+var lastscroll = 0;
 
 function scrollIndicator(){
   var scroll = window.scrollY;
@@ -11,7 +13,7 @@ function scrollIndicator(){
 
   var diff = Math.abs((scroll % step)-(step/2))/step * 2;
   var scrollIndicator = document.getElementById("scrollIndicator");
-  scrollIndicator.style.opacity = String((diff**6));
+  scrollIndicator.style.opacity = String((diff**7));
 
   if(scroll < step/2){
     scrollIndicatorUp.style.opacity = "0";
@@ -34,13 +36,12 @@ function scrollIndicator(){
   }
   page = page+1;
   var scrollPos = positionOnPage[page];
-  console.debug(scrollPos);
   if(scrollPos == -1){
-    scrollIndicator.style.margin = "0 25vw";
+    scrollIndicator.style.margin = "0 24vw";
   } else if(scrollPos == 1){
-    scrollIndicator.style.margin = "0 75vw";
+    scrollIndicator.style.margin = "0 74vw";
   } else {
-    scrollIndicator.style.margin = "0 50vw";
+    scrollIndicator.style.margin = "0 49vw";
   }
 }
 

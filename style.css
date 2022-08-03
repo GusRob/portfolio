@@ -8,6 +8,49 @@
   z-index: 10;
 }
 
+#aboutMePrompt {
+  width: 15vw;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  margin: 4vh 0vw 0 4vw;
+}
+
+#aboutMePromptIcon {
+  width: 2vw;
+  z-index: 1;
+  position: absolute;
+  margin: 1vh 6vw;
+}
+
+a:link #aboutMePrompt, a:visited #aboutMePrompt{
+  color: #222;
+}
+
+/* mouse over link */
+a:hover #aboutMePrompt {
+  color: #777;
+}
+
+a:link #middle, a:visited #middle{
+  content:url("/assets/images/scroll.png");
+}
+
+/* mouse over link */
+a:hover #middle {
+  content:url("/assets/images/scrollGrey.png");
+}
+
+a:link #bottom, a:visited #bottom{
+  content:url("/assets/images/scrollDown.png");
+}
+
+/* mouse over link */
+a:hover #bottom {
+  content:url("/assets/images/scrollDownGrey.png");
+}
+
+
 #frontpageCanvas {
   align-self: center;
   color: white;
@@ -45,7 +88,7 @@
 h1 {
   font-family: courier, "courier new", monospace;
   font-size: 75px;
-  color: #eee;
+  color: #222;
   font-style: normal;
   font-weight: normal;
   font-variant: small-caps;
@@ -57,14 +100,46 @@ h1 {
 h2 {
   font-family: courier, "courier new", monospace;
   font-size: 75px;
-  color: #eee;
+  color: #222;
   font-style: normal;
   font-weight: normal;
   font-variant: small-caps;
   text-align: center;
   letter-spacing: 10px;
   line-height: 24px;
+  margin: 6vh 2vw;
+}
 
+h4 {
+  font-family: courier, "courier new", monospace;
+  font-size: 4vh;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: small-caps;
+  text-align: center;
+  margin: 0;
+}
+
+h5 {
+  font-family: courier, "courier new", monospace;
+  font-size: 4vh;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: small-caps;
+  text-align: center;
+  margin: 0 0 4vh 0;
+}
+
+p {
+  font-family: courier, "courier new", monospace;
+  font-size: 3vh;
+  color: #222;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: small-caps;
+  text-align: center;
+  letter-spacing: 0.25vh;
+  margin: 0 0.5vw;
 }
 
 .projectText {
@@ -78,14 +153,13 @@ h2 {
   width: 50vw;
   height: 100vh;
   position: absolute;
-  right: 0;
 }
 
 .scrollSegment {
   width: 2vw;
   height: auto;
   z-index: 20;
-  margin: 0 auto;
+  margin: auto;
   position: relative;
 }
 
@@ -129,8 +203,21 @@ h2 {
   background-color: #fae;
 }
 
+.termgames {
+  background-color: #afc;
+}
+
 .page {
   margin: 0;
   scroll-snap-type: y mandatory;
   background-color: #fda;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
