@@ -3,6 +3,9 @@ const context = canvas.getContext('2d');
 let mouse_x = 0;
 let mouse_y = 0;
 
+var scrollHeight = window.scrollY;
+
+
 //dot formation
 
 var dotsX = [-0.18, -0.15, -0.12, -0.09, -0.06, -0.03,  0.02,  0.07,  0.10,  0.13,  0.16, 0.19, 0.22, -0.03, 0.06];
@@ -49,7 +52,7 @@ function moveDots() {
     dotToStartX = dotToStartX/dotToStartDist;
     dotToStartY = dotToStartY/dotToStartDist;
 
-    if(dotToStartDist > 1){
+    if(dotToStartDist > 0.5){
       dots[i].dx += (dotToStartX)*(dotToStartDist/100);
       dots[i].dy += (dotToStartY)*(dotToStartDist/100);
     }
@@ -71,6 +74,7 @@ function moveDots() {
 
 
 function drawDots() {
+
   context.clearRect(0, 0, canvas.width, canvas.height);
   for(var i = 0; i < dots.length; i++) {
     drawDot(context, dots[i]);
@@ -92,7 +96,12 @@ function drawDot(context, dot) {
 
 //EVENT LISTENERS
 
-window.addEventListener('resize', resizeCanvas, true);
+window.addEventListener('resize', windowSizeChange, true);
+
+function windowSizeChange(){
+  resizeCanvas();
+  setDots();
+}
 
 function resizeCanvas() {
   canvas.width = window.innerWidth-1;
@@ -107,4 +116,4 @@ canvas.addEventListener('mousemove', (e) => {
   mouse_y = e.offsetY;
 });
 
-var interval = setInterval(function () { moveDots(); }, 10);
+var interval = setInterval(function () {moveDots();}, 10);

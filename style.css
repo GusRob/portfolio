@@ -26,7 +26,7 @@
   position: fixed;
   left: 0;
   right: 0;
-  margin: 0 auto;
+  margin: 0 50vw;
   bottom: 5vh;
 }
 
@@ -52,6 +52,33 @@ h1 {
   text-align: center;
   letter-spacing: 10px;
   line-height: 24px;
+}
+
+h2 {
+  font-family: courier, "courier new", monospace;
+  font-size: 75px;
+  color: #eee;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: small-caps;
+  text-align: center;
+  letter-spacing: 10px;
+  line-height: 24px;
+
+}
+
+.projectText {
+  margin: 0 0;
+  width: 50vw;
+  position: absolute;
+}
+
+.embeddedProject {
+  background-color: #222;
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  right: 0;
 }
 
 .scrollSegment {
@@ -88,6 +115,18 @@ h1 {
   z-index: 0;
   overflow: hidden;
   scroll-snap-align: start;
+}
+
+.crypto {
+  background-color: #baf;
+}
+
+.chess {
+  background-color: #efa;
+}
+
+.djikstra {
+  background-color: #fae;
 }
 
 .page {
