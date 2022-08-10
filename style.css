@@ -142,6 +142,12 @@ p {
   margin: 0 4vw;
 }
 
+.projectTextFull {
+  margin: 0 0;
+  width: 100vw;
+  position: absolute;
+}
+
 .projectText {
   margin: 0 0;
   width: 50vw;
@@ -191,6 +197,25 @@ p {
   scroll-snap-align: start;
 }
 
+.page {
+  margin: 0;
+  scroll-snap-type: y mandatory;
+  background-color: #fda;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.mazeSolver {
+  background-color: #def;
+}
+
 .crypto {
   background-color: #baf;
 }
@@ -205,19 +230,4 @@ p {
 
 .termgames {
   background-color: #afc;
-}
-
-.page {
-  margin: 0;
-  scroll-snap-type: y mandatory;
-  background-color: #fda;
-}
-
-html, body {
-  scroll-behavior: smooth;
-  user-select: none; /* supported by Chrome and Opera */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
 }

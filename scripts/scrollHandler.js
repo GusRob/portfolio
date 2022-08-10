@@ -1,9 +1,9 @@
 var scrollIndicatorUp = document.getElementById("scrollUp");
 var scrollIndicatorDown = document.getElementById("scrollDown");
 
-var noOfPages = 6
+var noOfPages = 7
 
-var positionOnPage = [0, -1, 1, -1, 1, 0];
+var positionOnPage = [0, -1, 0, 1, 0, -1, 0];
 
 var lastscroll = 0;
 
