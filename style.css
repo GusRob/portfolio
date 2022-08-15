@@ -1,26 +1,16 @@
 
-
-#logo {
-  align-self: center;
-  margin: 20vh auto;
-  width: 10vw;
-  height: 5vw;
-  z-index: 10;
-}
-
 #aboutMePrompt {
-  width: 15vw;
+  width: 25vmin;
   z-index: 1;
   position: absolute;
   top: 0;
-  margin: 4vh 0vw 0 4vw;
+  margin: auto;
 }
 
 #aboutMePromptIcon {
-  width: 2vw;
+  width: 2vmin;
   z-index: 1;
-  position: absolute;
-  margin: 1vh 6vw;
+  margin: auto;
 }
 
 a:link #aboutMePrompt, a:visited #aboutMePrompt{
@@ -62,6 +52,17 @@ a:hover #bottom {
   position: absolute;
 }
 
+#mazeSolverCanvas {
+  align-self: center;
+  color: white;
+  width: 50vw;
+  height: 100vh;
+  overflow: visible;
+  white-space: nowrap;
+  z-index: 1;
+  position: absolute;
+}
+
 #scrollIndicator {
   width: 2vw;
   height: auto;
@@ -73,9 +74,18 @@ a:hover #bottom {
   bottom: 5vh;
 }
 
+#extLinks {
+  width: 5vw;
+  height: 5vw;
+  z-index: 20;
+  position: fixed;
+  top: 2.5vmax;
+  margin: 0 95vmax;
+}
+
 #name {
   align-self: center;
-  margin: 30vh 0;
+  margin: 60vmin 0;
   text-align: center;
   color: white;
   width: 100vw;
@@ -87,32 +97,31 @@ a:hover #bottom {
 
 h1 {
   font-family: courier, "courier new", monospace;
-  font-size: 75px;
+  font-size: 10vmin;
   color: #222;
   font-style: normal;
   font-weight: normal;
   font-variant: small-caps;
   text-align: center;
-  letter-spacing: 10px;
-  line-height: 24px;
+  letter-spacing: 2vmin;
 }
 
 h2 {
   font-family: courier, "courier new", monospace;
-  font-size: 75px;
+  font-size: 10vmin;
   color: #222;
   font-style: normal;
   font-weight: normal;
   font-variant: small-caps;
   text-align: center;
-  letter-spacing: 10px;
+  letter-spacing: 2vmin;
   line-height: 24px;
-  margin: 6vh 2vw;
+  margin: 6vh 0vw;
 }
 
 h4 {
   font-family: courier, "courier new", monospace;
-  font-size: 4vh;
+  font-size: 4vmin;
   font-style: normal;
   font-weight: normal;
   font-variant: small-caps;
@@ -122,7 +131,7 @@ h4 {
 
 h5 {
   font-family: courier, "courier new", monospace;
-  font-size: 5vh;
+  font-size: 5vmin;
   font-style: normal;
   font-weight: normal;
   font-variant: small-caps;
@@ -132,13 +141,13 @@ h5 {
 
 p {
   font-family: courier, "courier new", monospace;
-  font-size: 2.5vh;
+  font-size: 2.5vmin;
   color: #222;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-align: center;
-  letter-spacing: 0.25vh;
+  letter-spacing: 0.25vmin;
   margin: 0 4vw;
 }
 
@@ -154,15 +163,33 @@ p {
   position: absolute;
 }
 
-.embeddedProject {
+.projectExample {
   background-color: #222;
   width: 50vw;
   height: 100vh;
   position: absolute;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .projectExample {
+    width: 0vw;
+  }
+  .projectText {
+    width: 100vw;
+  }
+}
+
 .scrollSegment {
-  width: 2vw;
+  width: 4vmin;
+  height: auto;
+  z-index: 20;
+  margin: auto;
+  position: relative;
+}
+
+.link {
+  width: 5vmin;
   height: auto;
   z-index: 20;
   margin: auto;
@@ -225,9 +252,13 @@ html, body {
 }
 
 .djikstra {
-  background-color: #fae;
+  background-color: #afc;
 }
 
 .termgames {
-  background-color: #afc;
+  background-color: #fae;
+}
+
+.myInfo {
+  background-color: #aef;
 }

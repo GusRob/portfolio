@@ -1,19 +1,40 @@
 var scrollIndicatorUp = document.getElementById("scrollUp");
 var scrollIndicatorDown = document.getElementById("scrollDown");
 
-var noOfPages = 7
+var noOfPages = 6
 
-var positionOnPage = [0, -1, 0, 1, 0, -1, 0];
+var scrollIndicatorPos = [0, -1, 1, -1, 1, 0];
+var extLinksPos = [1, -1, 1, -1, 1, 1];
+var githubLinksDest = [
+  "https://github.com/GusRob",
+  "https://github.com/GusRob/Crypto",
+  "https://github.com/GusRob/ChessAI",
+  "https://github.com/GusRob/Djikstra",
+  "https://github.com/GusRob/TerminalGames",
+  "https://github.com/GusRob"];
 
 var lastscroll = 0;
 
-function scrollIndicator(){
+
+
+function scrollHandle(){
+
+
   var scroll = window.scrollY;
   var step = window.innerHeight;
 
+  if(scroll < 10 && window.location.href.endsWith("#footer")){
+    window.location.href = '/index.html';
+  }
+
+
   var diff = Math.abs((scroll % step)-(step/2))/step * 2;
   var scrollIndicator = document.getElementById("scrollIndicator");
+  var extLinks = document.getElementById("extLinks");
+  var githubLinkDest = document.getElementById("githubLinkDest");
+
   scrollIndicator.style.opacity = String((diff**7));
+  extLinks.style.opacity = String((diff**7));
 
   if(scroll < step/2){
     scrollIndicatorUp.style.opacity = "0";
@@ -27,6 +48,8 @@ function scrollIndicator(){
     scrollIndicatorDown.style.opacity = "1";
   }
 
+
+
   var page = 0;
   var div = (scroll/step)-0.5
   if(Math.ceil(div) < Math.floor(div)){
@@ -34,18 +57,35 @@ function scrollIndicator(){
   } else {
     page = Math.floor(div);
   }
-  page = page+1;
-  var scrollPos = positionOnPage[page];
-  if(scrollPos == -1){
-    scrollIndicator.style.margin = "0 24vw";
-  } else if(scrollPos == 1){
-    scrollIndicator.style.margin = "0 74vw";
-  } else {
+
+
+  if (window.matchMedia("(max-width: 768px)").matches) {
     scrollIndicator.style.margin = "0 49vw";
+  } else {
+    page = page+1;
+    var scrollPos = scrollIndicatorPos[page];
+    if(scrollPos == -1){
+      scrollIndicator.style.margin = "0 24vw";
+    } else if(scrollPos == 1){
+      scrollIndicator.style.margin = "0 74vw";
+    } else {
+      scrollIndicator.style.margin = "0 49vw";
+    }
   }
+
+
+  var linksPos = extLinksPos[page];
+  if(linksPos == -1){
+    extLinks.style.margin = "0 2.5vw";
+  } else if(linksPos == 1){
+    extLinks.style.margin = "0 95vw";
+  }
+  githubLinkDest.href = githubLinksDest[page];
+
+
 }
 
 
-
-
-var interval = setInterval(function(){scrollIndicator();}, 10);
+scrollHandle();
+document.addEventListener("scroll", scrollHandle);
+document.addEventListener("resize", scrollHandle);

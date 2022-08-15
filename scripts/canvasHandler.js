@@ -3,7 +3,6 @@ const context = canvas.getContext('2d');
 let mouse_x = 0;
 let mouse_y = 0;
 
-var scrollHeight = window.scrollY;
 
 
 //dot formation

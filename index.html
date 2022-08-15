@@ -29,9 +29,14 @@
   <body class="page">
 
     <div id="scrollIndicator">
-      <img id="scrollUp" class="scrollSegment" src="/assets/images/scrollUp.png" alt="scroll indicator"></img>
-      <img class="scrollSegment" src="/assets/images/scroll.png" alt="scroll indicator"></img>
-      <img id="scrollDown" class="scrollSegment" src="/assets/images/scrollDown.png" alt="scroll indicator"></img>
+      <img id="scrollUp" class="scrollSegment" src="/assets/images/scrollUp.png" alt="scroll indicator" width="10px" height="10px"></img>
+      <img class="scrollSegment" src="/assets/images/scroll.png" alt="scroll indicator" width="10px" height="10px"></img>
+      <img id="scrollDown" class="scrollSegment" src="/assets/images/scrollDown.png" alt="scroll indicator" width="10px" height="10px"></img>
+    </div>
+    <div id="extLinks">
+      <a id="githubLinkDest" href="https://github.com/GusRob">
+        <img id="githubLink" class="link" src="/assets/link_imgs/GitHub-Mark-120px-dark.png" alt="scroll indicator" width="10px" height="10px"></img>
+      </a>
     </div>
     <div class="section">
       <div class="sectionBg fitToParent">
@@ -41,19 +46,13 @@
 
         <canvas id="frontpageCanvas" width="100vw" height="100vh"></canvas>
 
-        <div id="logo">
-          <!--
-          <img src="/assets/fullLogo.svg" alt="Logo with letter A (for Angus you know)"></img>
-          -->
-        </div>
-
         <a href="#footer">
         <div id="aboutMePrompt">
           <h4>Scroll For</h4>
           <h4>About Me</h4>
           <div id="aboutMePromptIcon">
-            <img id="middle" class="scrollSegment" src="/assets/images/scroll.png" alt="scroll indicator"></img>
-            <img id="bottom" class="scrollSegment" src="/assets/images/scrollDown.png" alt="scroll indicator"></img>
+            <img id="middle" class="scrollSegment" src="/assets/images/scroll.png" alt="scroll indicator" width="10px" height="10px"></img>
+            <img id="bottom" class="scrollSegment" src="/assets/images/scrollDown.png" alt="scroll indicator" width="10px" height="10px"></img>
           </div>
         </div>
         </a>
@@ -64,46 +63,22 @@
       </div>
     </div>
 
-    <div class="section mazeSolver">
-      <div class="sectionBg fitToParent">
-        <!--
-        <img class = "fitToParent" src="/assets/images/geometry.png" alt="background image"></img>
-        <div class="darkenFilter fitToParent"></div>
-        -->
-      </div>
-      <div class="sectionContent fitToParent">
-        <div class="projectText" style="left: 0;">
-          <h2>MazeSolver</h2>
-          <h5>Shortest route through custom maze </h5>
-          <p>
-            I created this project to have an interactable project on my page.
-            <br />
-            <br />
-            Have fun.
-            <br />
-            <br />
-            <br />Its over there &#8594;
-          </p>
-        </div>
-        <div class="embeddedProject" style="right: 0;">
-          
-        </div>
-      </div>
-    </div>
-
     <div class="section crypto">
       <div class="sectionBg fitToParent">
       </div>
       <div class="sectionContent fitToParent">
-        <div class="projectTextFull" style="left: 0;">
+        <div class="projectText" style="left: 0;">
           <h2>Crypto</h2>
           <h5>A study in cryptographic encryption and decryption algorithms </h5>
           <p>
             My first CLI project with python; this project implements several encryption algorithms, along with timing features, used to estimate success of brute force attacks with sequential processors. <br>
             The program can handle encoding and decoding DES, 3DES and AES ciphers, with functions for symmetric key generation, in addition to an RSA encoder/decoder, with asymmetric key generation to text files also possible. <br>
-            The interface is accessible on the right, and this project can be downloaded from my github page.<br>
-            <br>Type "help" for instructions →
+            <br>
+            The project can be downloaded from my github page, where a the README.md shows how each of the algorithms perform.<br>
           </p>
+        </div>
+        <div class="projectExample" style="right: 0;">
+
         </div>
       </div>
     </div>
@@ -119,11 +94,11 @@
             For this project, I created a chess game engine that can play games with human vs human, human vs bot, or bot vs bot.<br />
             <br />
             I thought it would be fun to attempt to create a fleet of bots that are each of varying difficulties, using completely different algorithms instead of just adjusting the depth of the same minimax algorithm.<br />
-            I cant beat the most advanced bot, so I consider this project to be a huge success.<br />
-            <br />&#8592; Enjoy!
+            <br />
+            Naturally the most advanced algorithm is minimax with alpha beta pruning, but I added a test feature which showed that the randomness of the worst bots sometimes wins.<br />
           </p>
         </div>
-        <div class="embeddedProject" style="left: 0;">
+        <div class="projectExample" style="left: 0;">
 
         </div>
       </div>
@@ -133,7 +108,7 @@
       <div class="sectionBg fitToParent">
       </div>
       <div class="sectionContent fitToParent">
-        <div class="projectTextFull" style="left: 0;">
+        <div class="projectText" style="left: 0;">
           <h2>Djikstra</h2>
           <h5>An implementation of djikstra's algorithm to find optimal routes </h5>
           <p>
@@ -144,29 +119,32 @@
           </p>
         </div>
       </div>
+      <div class="projectExample" style="right: 0;">
+
+      </div>
     </div>
 
     <div class="section termgames">
       <div class="sectionBg fitToParent">
       </div>
       <div class="sectionContent fitToParent">
-        <div class="projectText" style="left: 0;">
-          <h2>TerminalGames</h2>
+        <div class="projectText" style="right: 0;">
+          <h2>Minigames</h2>
           <h5>I made this so I could play games during history lessons </h5>
           <p>
-            While this project was initially not for serious development, when I began extending the games, i found that making 2 player games required opponents that would actually be fun to play against. <br /><br />
+            While this project was initially not for serious development, when I began extending the games, I found that making 2 player games required opponents that would actually be fun to play against. <br /><br />
             Noughts and Crosses introduced alpha-beta pruning in minimax trees, and battleships opened a tin of statistical analysis that was mind numbing. <br />
             But on the plus side I've not won at battleships in a long time, so a success in my eyes. <br />
             <br />&#8592; Please dont beat my high scores
           </p>
         </div>
-        <div class="embeddedProject" style="right: 0;">
+        <div class="projectExample" style="left: 0;">
 
         </div>
       </div>
     </div>
 
-    <div class="section MyInfo">
+    <div class="section myInfo">
       <div class="sectionBg fitToParent">
       </div>
       <div class="sectionContent fitToParent">
