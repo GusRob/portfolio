@@ -13,33 +13,32 @@
   margin: auto;
 }
 
-a:link #aboutMePrompt, a:visited #aboutMePrompt{
+a:link #aboutMePrompt, a:visited #aboutMePrompt {
   color: #222;
+  opacity: 1;
 }
-
-/* mouse over link */
 a:hover #aboutMePrompt {
-  color: #777;
+  color: #222;
+  opacity: 0.5;
 }
 
-a:link #middle, a:visited #middle{
-  content:url("/assets/images/scroll.png");
+a:link .link, a:visited .link {
+  opacity: 1;
+}
+a:hover .link {
+  opacity: 0.5;
 }
 
-/* mouse over link */
-a:hover #middle {
-  content:url("/assets/images/scrollGrey.png");
+h3 a:link, h3 a:visited {
+  text-decoration: none;
+  color: #222;
+  opacity: 1;
 }
-
-a:link #bottom, a:visited #bottom{
-  content:url("/assets/images/scrollDown.png");
+h3 a:hover {
+  text-decoration: none;
+  color: #222;
+  opacity: 0.5;
 }
-
-/* mouse over link */
-a:hover #bottom {
-  content:url("/assets/images/scrollDownGrey.png");
-}
-
 
 #frontpageCanvas {
   align-self: center;
@@ -95,6 +94,29 @@ a:hover #bottom {
   z-index: 10;
 }
 
+#picOfMe {
+  position: absolute;
+  width: 30vw;
+  height: 30vh;
+}
+
+#details {
+  position: absolute;
+  top: 50vh;
+  width: 40vw;
+  height: 30vh;
+}
+
+#gif {
+  position: absolute;
+  width: 50vw;
+  height: auto;
+  top: 10vh;
+  left: 25vw;
+  margin: auto;
+}
+
+
 h1 {
   font-family: courier, "courier new", monospace;
   font-size: 10vmin;
@@ -117,6 +139,16 @@ h2 {
   letter-spacing: 2vmin;
   line-height: 24px;
   margin: 6vh 0vw;
+}
+
+h3 {
+  font-family: courier, "courier new", monospace;
+  font-size: 3.5vmin;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: small-caps;
+  text-align: left;
+  margin: 0 0 4vh 0;
 }
 
 h4 {
@@ -170,16 +202,6 @@ p {
   position: absolute;
 }
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .projectExample {
-    width: 0vw;
-  }
-  .projectText {
-    width: 100vw;
-  }
-}
-
 .scrollSegment {
   width: 4vmin;
   height: auto;
@@ -229,6 +251,31 @@ p {
   scroll-snap-type: y mandatory;
   background-color: #fda;
 }
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .projectExample {
+    width: 0vw;
+  }
+  .projectText {
+    width: 100vw;
+  }
+  h2 {
+    font-size: 20vmin;
+    letter-spacing: 2vmin;
+    line-height: 24px;
+  }
+  h5 {
+    font-size: 5vmin;
+    margin: 0 0 4vh 0;
+  }
+  p {
+    font-size: 4vmin;
+    margin: 0 4vw;
+  }
+}
+
 
 html, body {
   scroll-behavior: smooth;

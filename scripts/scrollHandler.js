@@ -18,13 +18,11 @@ var lastscroll = 0;
 
 
 function scrollHandle(){
-
-
   var scroll = window.scrollY;
   var step = window.innerHeight;
 
   if(scroll < 10 && window.location.href.endsWith("#footer")){
-    window.location.href = '/index.html';
+    window.location.href = '/';
   }
 
 
@@ -32,6 +30,8 @@ function scrollHandle(){
   var scrollIndicator = document.getElementById("scrollIndicator");
   var extLinks = document.getElementById("extLinks");
   var githubLinkDest = document.getElementById("githubLinkDest");
+
+
 
   scrollIndicator.style.opacity = String((diff**7));
   extLinks.style.opacity = String((diff**7));
@@ -57,13 +57,15 @@ function scrollHandle(){
   } else {
     page = Math.floor(div);
   }
+  page = page+1;
+  var scrollPos = scrollIndicatorPos[page];
+  var linksPos = extLinksPos[page];
 
 
   if (window.matchMedia("(max-width: 768px)").matches) {
     scrollIndicator.style.margin = "0 49vw";
+    extLinks.style.margin = "0 90vw";
   } else {
-    page = page+1;
-    var scrollPos = scrollIndicatorPos[page];
     if(scrollPos == -1){
       scrollIndicator.style.margin = "0 24vw";
     } else if(scrollPos == 1){
@@ -71,18 +73,17 @@ function scrollHandle(){
     } else {
       scrollIndicator.style.margin = "0 49vw";
     }
+    if(linksPos == -1){
+      extLinks.style.margin = "0 2.5vw";
+    } else if(linksPos == 1){
+      extLinks.style.margin = "0 95vw";
+    }
   }
 
 
-  var linksPos = extLinksPos[page];
-  if(linksPos == -1){
-    extLinks.style.margin = "0 2.5vw";
-  } else if(linksPos == 1){
-    extLinks.style.margin = "0 95vw";
-  }
   githubLinkDest.href = githubLinksDest[page];
 
-
+  lastscroll = scroll;
 }
 
 
