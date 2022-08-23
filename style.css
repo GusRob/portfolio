@@ -17,6 +17,7 @@ a:link #aboutMePrompt, a:visited #aboutMePrompt {
   color: #222;
   opacity: 1;
 }
+
 a:hover #aboutMePrompt {
   color: #222;
   opacity: 0.5;
@@ -25,6 +26,7 @@ a:hover #aboutMePrompt {
 a:link .link, a:visited .link {
   opacity: 1;
 }
+
 a:hover .link {
   opacity: 0.5;
 }
@@ -84,7 +86,7 @@ h3 a:hover {
 
 #name {
   align-self: center;
-  margin: 60vmin 0;
+  margin: 60vh 0;
   text-align: center;
   color: white;
   width: 100vw;
@@ -96,13 +98,15 @@ h3 a:hover {
 
 #picOfMe {
   position: absolute;
-  width: 30vw;
-  height: 30vh;
+  width: 35vmin;
+  height: 35vmin;
+  margin: 0 10vmin;
+  border-radius: 5vmin;
 }
 
 #details {
   position: absolute;
-  top: 50vh;
+  top: 55vh;
   width: 40vw;
   height: 30vh;
 }
