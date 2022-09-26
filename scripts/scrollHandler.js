@@ -1,16 +1,11 @@
 var scrollIndicatorUp = document.getElementById("scrollUp");
 var scrollIndicatorDown = document.getElementById("scrollDown");
 
-var noOfPages = 6
-
-var scrollIndicatorPos = [0, -1, 1, -1, 1, 0];
-var extLinksPos = [1, -1, 1, -1, 1, 1];
+var scrollIndicatorPos = [0, -1, 0];
+var extLinksPos = [1, -1, 1];
 var githubLinksDest = [
   "https://github.com/GusRob",
-  "https://github.com/GusRob/Crypto",
-  "https://github.com/GusRob/ChessAI",
-  "https://github.com/GusRob/Djikstra",
-  "https://github.com/GusRob/TerminalGames",
+  "https://github.com/GusRob/Wordle",
   "https://github.com/GusRob"];
 
 var lastscroll = 0;
@@ -42,7 +37,7 @@ function scrollHandle(){
     scrollIndicatorUp.style.opacity = "1";
   }
 
-  if(scroll > step*(noOfPages-1.5)){
+  if(scroll > step*(scrollIndicatorPos.length-1.5)){
     scrollIndicatorDown.style.opacity = "0";
   } else {
     scrollIndicatorDown.style.opacity = "1";

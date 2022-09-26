@@ -1,0 +1,160 @@
+
+html, body {
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  cursor: default;
+}
+
+#mainContainer {
+  border: 5px solid gray;
+  background-color: #333;
+  position: absolute;
+  aspect-ratio: 0.5;
+  max-width: 50%;
+  min-height: max(90%, 420px);
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.guessRow {
+  border: none;
+  width: 95%;
+  height: 10%;
+  margin: 0% 2.5% 0%;
+}
+
+.letter {
+  border: 2px solid gray;
+  width: calc(14% - 2px);
+  height: calc(70% - 3px);
+  border-radius: 15%;
+  margin: 2.5%;
+  float: left;
+  font-size: 5vh;
+  text-align: center;
+  line-height: 125%;
+}
+
+#gameControl {
+  width: 100%;
+  height: 5%;
+}
+
+.controlButton {
+  background-color: #777;
+  width: 30%;
+  height: 75%;
+  margin: 1% 1.5%;
+  float: left;
+  border-radius: 5% / 20%;
+  font-size: 2.5vh;
+  text-align: center;
+  line-height: 140%;
+}
+
+.controlButton:hover:not(.gaf, .gay, .gag) {
+  background-color: #999;
+}
+.controlButton:active:not(.gaf, .gay, .gag) {
+  background-color: #666;
+}
+
+#keyboard {
+  width: 100%;
+  height: 25%;
+}
+
+.keyboardRow {
+  width: 100%;
+  height: 25%;
+  margin: 2% 0%;
+  float: left;
+}
+
+.key {
+  width: 8%;
+  margin: 0 1%;
+  height: 100%;
+  float: left;
+  border-radius: 10% / 10%;
+  background-color: #777;
+  font-size: 3vh;
+  text-align: center;
+  line-height: 150%;
+}
+
+.gaf {
+  background-color: #444;
+}
+.gay {
+  background-color: #DD0;
+}
+.gag {
+  background-color: #0D0;
+}
+
+.key.gaf:hover {
+  background-color: #666;
+}
+.key.gaf:active {
+  background-color: #222;
+}
+
+.key.gag:hover {
+  background-color: #0F0;
+}
+.key.gag:active {
+  background-color: #0B0;
+}
+
+.key.gay:hover {
+  background-color: #FF0;
+}
+.key.gay:active {
+  background-color: #BB0;
+}
+
+.key:hover:not(.gaf, .gay, .gag) {
+  background-color: #999;
+}
+.key:active:not(.gaf, .gay, .gag) {
+  background-color: #666;
+}
+
+.halfKey {
+  width: 3%;
+  margin: 0 1%;
+  height: 100%;
+  float: left;
+  border-radius: 10% / 10%;
+  visibility: hidden;
+}
+
+@keyframes flashGreen {
+  0%   {color: green;}
+  49%   {color: lightgreen;}
+  50%  {color: lightgreen;}
+  99%   {color: green;}
+}
+
+#solution {
+  width: 100%;
+  height: 9%;
+  font-size: 5.5vh;
+  text-align: center;
+  line-height: 140%;
+  color: green;
+  animation-name: flashGreen;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  visibility: hidden;
+}

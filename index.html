@@ -68,79 +68,23 @@
       </div>
       <div class="sectionContent fitToParent">
         <div class="projectText" style="left: 0;">
-          <h2>Crypto</h2>
-          <h5>A study in cryptographic encryption and decryption algorithms </h5>
+          <h2>Wordle</h2>
+          <h5>A simple Wordle clone </h5>
           <p>
-            My first CLI project with python; this project implements several encryption algorithms, along with timing features, used to estimate success of brute force attacks with sequential processors. <br>
-            The program can handle encoding and decoding DES, 3DES and AES ciphers, with functions for symmetric key generation, in addition to an RSA encoder/decoder, with asymmetric key generation to text files also possible. <br>
-            <br>
-            The project can be downloaded from my github page, where a the README.md shows how each of the algorithms perform.<br>
+            This project is a clone of the <a href="https://www.nytimes.com/games/wordle/index.html">wordle game</a> in which a player needs to guess the secret 5 letter word.
+            <br><br>After each guess the colours of the letters indicate their existance and position in the secret word.
           </p>
+          <p style="text-align: left;">
+            <br><br>Gray - letter doesn't exist in the word
+            <br><br>Yellow - letter exists in a different location
+            <br><br>Green - letter exists in that exact location
+          </p>
+          <p>
+            <br><br>
+            The solution button is not a part of the game, it's existance just makes it easier to see how the colouring system works (i.e. how multiple letters are handled etc.)
         </div>
         <div class="projectExample" style="right: 0;">
-
-        </div>
-      </div>
-    </div>
-
-    <div class="section chess">
-      <div class="sectionBg fitToParent">
-      </div>
-      <div class="sectionContent fitToParent">
-        <div class="projectText" style="right: 0;">
-          <h2>ChessBot</h2>
-          <h5>Creating a bot that beats me in chess (shouldnt be too hard)</h5>
-          <p>
-            For this project, I created a chess game engine that can play games with human vs human, human vs bot, or bot vs bot.<br />
-            <br />
-            I thought it would be fun to attempt to create a fleet of bots that are each of varying difficulties, using completely different algorithms instead of just adjusting the depth of the same minimax algorithm.<br />
-            <br />
-            Naturally the most advanced algorithm is minimax with alpha beta pruning, but I added a test feature which showed that the randomness of the worst bots sometimes wins.<br />
-          </p>
-        </div>
-        <div class="projectExample" style="left: 0;">
-
-        </div>
-      </div>
-    </div>
-
-    <div class="section djikstra">
-      <div class="sectionBg fitToParent">
-      </div>
-      <div class="sectionContent fitToParent">
-        <div class="projectText" style="left: 0;">
-          <h2>Djikstra</h2>
-          <h5>An implementation of djikstra's algorithm to find optimal routes </h5>
-          <p>
-            It's not google maps, but it's very efficient <br /><br />
-            Amusingly, the hardest thing to implement in this project was just getting the little numbers to sit next to the arcs within the canvas, I feel like it required the invention of a whole new algorithm. <br />
-            <br />
-            Until told that it already exists, or that there is a better algorithm for it, I shall name this function-for-putting-little-numbers-next-to-lines-in-2d, 'The Angus Algorithm'.<br />
-          </p>
-        </div>
-      </div>
-      <div class="projectExample" style="right: 0;">
-
-      </div>
-    </div>
-
-    <div class="section termgames">
-      <div class="sectionBg fitToParent">
-      </div>
-      <div class="sectionContent fitToParent">
-        <div class="projectText" style="right: 0;">
-          <h2>Minigames</h2>
-          <h5>I made this so I could play games during history lessons </h5>
-          <p>
-            While this project was initially not for serious development, when I began extending the games, I found that making 2 player games required opponents that would actually be fun to play against. <br /><br />
-            <br />
-            Noughts and Crosses introduced alpha-beta pruning in minimax trees, and battleships opened a tin of statistical analysis that was mind numbing. <br />
-            <br />
-            But on the plus side I've not won at battleships in a long time, so a success in my eyes. <br />
-          </p>
-        </div>
-        <div class="projectExample" style="left: 0;">
-
+          <embed type="text/html" src="/wordle_copy/index.html" width="100%" height="100%">
         </div>
       </div>
     </div>
@@ -162,8 +106,8 @@
     <footer id="footer"></footer>
   </body>
 
-  <script src="scripts/canvasHandler.js"></script>
-  <script src="scripts/scrollHandler.js"></script>
+  <script src="/scripts/canvasHandler.js"></script>
+  <script src="/scripts/scrollHandler.js"></script>
 </html>
 
 
