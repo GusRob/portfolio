@@ -137,7 +137,7 @@ function updateKey(keyId, value){
         keyRef.classList.remove("gag");
       }
     } else {
-      if(!keyRef.classList.contains("gay")){
+      if(!keyRef.classList.contains("gay") && !keyRef.classList.contains("gag")){
         keyRef.classList.add("gaf");
         keyRef.classList.remove("gay");
         keyRef.classList.remove("gag");
