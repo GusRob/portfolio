@@ -26,88 +26,26 @@
   </head>
 
 
-  <body class="page">
-
-    <div id="scrollIndicator">
-      <img id="scrollUp" class="scrollSegment" src="/assets/images/scrollUp.png" alt="scroll indicator" width="10px" height="10px"></img>
-      <img class="scrollSegment" src="/assets/images/scroll.png" alt="scroll indicator" width="10px" height="10px"></img>
-      <img id="scrollDown" class="scrollSegment" src="/assets/images/scrollDown.png" alt="scroll indicator" width="10px" height="10px"></img>
+  <body>
+    <canvas id="background"></canvas>
+    <h1> Angus Robertson </h1>
+    <h2> Computer Science MEng </h2>
+    <div id="buttonHolder">
+      <a href="http://www.github.com/gusrob"><div class="link github">
+        <img src="/assets/link_imgs/Github-Mark-120px-dark.png"/>
+        <p>Github</p>
+      </div></a>
+      <a href="github.com/gusrob"><div class="link linkedin">
+        <img src="/assets/link_imgs/Li-In-Bug.png"/>
+        <p>LinkedIn</p>
+      </div></a>
+      <a href="github.com/gusrob"><div class="link resume">
+        <img src="/assets/link_imgs/doc_icon.png"/>
+        <p>Resume</p>
+      </div></a>
     </div>
-    <div id="extLinks">
-      <a id="githubLinkDest" href="https://github.com/GusRob">
-        <img id="githubLink" class="link" src="/assets/link_imgs/GitHub-Mark-120px-dark.png" alt="scroll indicator" width="10px" height="10px"></img>
-      </a>
-    </div>
-    <div class="section">
-      <div class="sectionBg fitToParent">
-
-      </div>
-      <div class="sectionContent fitToParent">
-
-        <canvas id="frontpageCanvas" width="100vw" height="100vh"></canvas>
-
-        <a href="#footer">
-        <div id="aboutMePrompt">
-          <h4>Scroll For</h4>
-          <h4>About Me</h4>
-          <div id="aboutMePromptIcon">
-            <img id="middle" class="scrollSegment" src="/assets/images/scroll.png" alt="scroll indicator" width="10px" height="10px"></img>
-            <img id="bottom" class="scrollSegment" src="/assets/images/scrollDown.png" alt="scroll indicator" width="10px" height="10px"></img>
-          </div>
-        </div>
-        </a>
-
-        <div id="name">
-          <h1> Angus Robertson </h1>
-        </div>
-      </div>
-    </div>
-
-    <div class="section crypto">
-      <div class="sectionBg fitToParent">
-      </div>
-      <div class="sectionContent fitToParent">
-        <div class="projectText" style="left: 0;">
-          <h2>Wordle</h2>
-          <h5>A simple Wordle clone </h5>
-          <p>
-            This project is a clone of the <a href="https://www.nytimes.com/games/wordle/index.html">wordle game</a> in which a player needs to guess the secret 5 letter word.
-            <br><br>After each guess the colours of the letters indicate their existance and position in the secret word.
-          </p>
-          <p style="text-align: left;">
-            <br><br>Gray - letter doesn't exist in the word
-            <br><br>Yellow - letter exists in a different location
-            <br><br>Green - letter exists in that exact location
-          </p>
-          <p>
-            <br><br>
-            The solution button is not a part of the game, it's existance just makes it easier to see how the colouring system works (i.e. how multiple letters are handled etc.)
-        </div>
-        <div class="projectExample" style="right: 0;">
-          <embed type="text/html" src="/wordle_copy/index.html" width="100%" height="100%">
-        </div>
-      </div>
-    </div>
-
-    <div class="section myInfo">
-      <div class="sectionBg fitToParent">
-      </div>
-      <div class="sectionContent fitToParent">
-        <h2>MyInfo</h2>
-
-        <img id="picOfMe" src="/assets/images/Angus copy.png" alt="me" width="10px" height="10px"></img>
-        <div id="details">
-          <h3> Contact Me at: <a href="mailto: angusprobertson@gmail.com">angusprobertson@gmail.com</a> </h3>
-          <h3> Visit My Github: <a href="https://github.com/gusrob">github.com/gusrob</a> </h3>
-          <h3> A little Gift: <a href="/michael.html">Enjoy!</a> </h3>
-        </div>
-      </div>
-    </div>
-    <footer id="footer"></footer>
+    <script src="/scripts/script.js"></script>
   </body>
-
-  <script src="/scripts/canvasHandler.js"></script>
-  <script src="/scripts/scrollHandler.js"></script>
 </html>
 
 
