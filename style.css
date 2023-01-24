@@ -12,6 +12,122 @@ body {
   background-color: rgb(225, 255, 255);
   margin: auto;
 }
+
+#aboutMePromptIcon {
+  width: 2vmin;
+  z-index: 1;
+  margin: auto;
+}
+
+a:link #aboutMePrompt, a:visited #aboutMePrompt {
+  color: #222;
+  opacity: 1;
+}
+
+a:hover #aboutMePrompt {
+  color: #222;
+  opacity: 0.5;
+}
+
+a:link .link, a:visited .link {
+  opacity: 1;
+}
+
+a:hover .link {
+  opacity: 0.5;
+}
+
+h3 a:link, h3 a:visited {
+  text-decoration: none;
+  color: #222;
+  opacity: 1;
+}
+h3 a:hover {
+  text-decoration: none;
+  color: #222;
+  opacity: 0.5;
+}
+
+#frontpageCanvas {
+  align-self: center;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
+  white-space: nowrap;
+  z-index: 1;
+  position: absolute;
+}
+
+#mazeSolverCanvas {
+  align-self: center;
+  color: white;
+  width: 50vw;
+  height: 100vh;
+  overflow: visible;
+  white-space: nowrap;
+  z-index: 1;
+  position: absolute;
+}
+
+#scrollIndicator {
+  width: 2vw;
+  height: auto;
+  z-index: 20;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 50vw;
+  bottom: 5vh;
+}
+
+#extLinks {
+  width: 5vw;
+  height: 5vw;
+  z-index: 20;
+  position: fixed;
+  top: 2.5vmax;
+  margin: 0 95vmax;
+}
+
+#name {
+  align-self: center;
+  margin: 60vh 0;
+  text-align: center;
+  color: white;
+  width: 100vw;
+  height: 10vh;
+  overflow: visible;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+#picOfMe {
+  position: absolute;
+  width: 35vmin;
+  height: 35vmin;
+  margin: 0 10vmin;
+  border-radius: 5vmin;
+}
+
+#details {
+  position: absolute;
+  top: 55vh;
+  width: 40vw;
+  height: 30vh;
+  padding-left: 5vw;
+}
+
+#gif {
+  position: absolute;
+  width: 50vw;
+  height: auto;
+  top: 10vh;
+  left: 25vw;
+  margin: auto;
+}
+
+
 h1 {
   font-size: 5vw;
   font-family: Courier;
