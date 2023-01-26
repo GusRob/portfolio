@@ -6,6 +6,7 @@
   font-family: Courier;
   font-style: normal;
   font-variant: normal;
+  text-decoration: none;
 }
 
 body {
@@ -13,7 +14,6 @@ body {
   width: 98vw;
   background-color: #1C2739;
   color: #FF9F02;
-  min-width: 1000px;
 }
 
 #header {
@@ -22,29 +22,29 @@ body {
   left: 0;
   background-color: #1C2739;
   border-bottom: 4px solid white;
-  width: calc(98.5vw - 200px);
+  width: calc(91vw - 100px);
   height: 150px;
-  padding-left: 200px;
+  padding-left: calc(7vw + 100px);
 }
 
 h1 {
-  font-size: 70px;
+  font-size: calc(4vw + 15px);
   font-weight: 400;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: calc(3vw + 15px);
   font-weight: 400;
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 3vw;
   font-weight: 400;
   line-height: 200%;
 }
 
 p {
-  font-size: 20px;
+  font-size: 2vw;
   font-weight: 400;
   line-height: 250%;
 }
@@ -73,8 +73,8 @@ p b {
 #picOfMeBg {
   background-color: white;
   border-radius: 79px 79px 0 0;
-  width: 150px;
-  height: 75px;
+  width: calc(5vw + 75px);
+  height: calc(2.5vw + 37.5px);
   padding: 4px;
   bottom: -0.1vw;
   left: 1vw;
@@ -85,8 +85,8 @@ p b {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: calc(5vw + 75px);
+  height: calc(5vw + 75px);
 }
 
 
@@ -94,4 +94,24 @@ p b {
   width: 92vw;
   margin-top: 30px;
   padding: 3%;
+}
+
+.extLink {
+  object-fit: cover;
+  height: 100%;
+}
+
+.extLink:hover {
+  filter: opacity(80%);
+}
+.extLink:active {
+  filter: opacity(100%);
+}
+
+#links {
+  position: absolute;
+  width: 15vw;
+  height: 3vw;
+  right: 2vw;
+  bottom: 1vw;
 }
