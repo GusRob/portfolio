@@ -1,94 +1,49 @@
-<!DOCTYPE html>
-
+<!DOCTYPE HTML>
 <html>
-  <head>
+	<head>
+		<title>Angus Robertson</title>
 
-    <title>Angus Robertson</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Angus Robertson's portfolio website">
+		<meta name="keywords" content="HTML, CSS, JavaScript">
+		<meta name="author" content="Angus Robertson">
 
-
-    <meta charset="UTF-8">
-    <meta name="description" content="Angus Robertson's portfolio website">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Angus Robertson">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/icon/site.webmanifest">
-    <link rel="mask-icon" href="/assets/icon/safari-pinned-tab.svg" color="#ff9f00">
-    <link rel="shortcut icon" href="/assets/icon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#ff9f00">
-    <meta name="msapplication-config" content="/assets/icon/browserconfig.xml">
-    <meta name="theme-color" content="#ff9f00">
-
-    <link rel="stylesheet" href="style.css">
-  </head>
-
-
-  <body>
-    <div id="header">
-      <div id="picOfMeBg">
-        <img id="picOfMe" src="assets/images/Me.jpg" width="200px" height="200px">
-      </div>
-      <h1> Angus Robertson </h1>
-      <h2> Computer Science MEng </h2>
-      <div id="links">
-        <a href="assets/AngusRobertsonResume.pdf">
-          <img class="extLink" src="assets/linkimgs/docicon.png">
-        </a>
-        <a href="https://www.linkedin.com/in/angus-r-a6318016a/">
-          <img class="extLink" src="assets/linkimgs/linkedinicon.png">
-        </a>
-        <a href="https://www.github.com/GusRob">
-          <img class="extLink" src="assets/linkimgs/githubicon.png">
-        </a>
-      </div>
-    </div>
-
-    <div id="main">
-
-      <h3> 👋 Glad you could make it </h3>
-      <p>
-        &#9728; Computer Science graduate with a passion for software design;<br>
-        &#9728; I'm a problem solver who loves finding simple solutions to complex problems; <br>
-        &#9728; After a Master's degree at the University of Bristol, there's nothing I can't code my way out of; <br>
-        &#9728; Now I'm looking for a role in cybersecurity or fintech, or anything that involves software development; <br>
-        &#9728; I am eager to work collaboratively on large scale projects where the work done can have a real impact;
-      </p>
-      <br>
-      <br>
-      <hr style = "height: 1px;width:75%; margin:0px auto;">
-      <br>
-      <br>
-      <h3> 💻 My Projects </h3>
-      <br>
-      <br>
-    
-      <h4> Graphics Engine</h4>
-      <p>
-        An extension of a coursework prompt: build a rendering engine given access to a drawing window and individual pixel control.
-        This project is still in development; visit my github for the latest ident produced.
-      </p>
-      <br>
-      <hr style = "height: 0px;width:50%; margin:0px auto;">
-      <br>
-      <h4> Hertzbleed x McEliece</h4>
-      <p>
-        My dissertation project from my masters degree. An analysis of the effectiveness of the Hertzbleed cryptographic side channel attack against the Classic McEliece PQC NIST round 4 candidate.
-      </p>
-      <br>
-      <hr style = "height: 0px;width:50%; margin:0px auto;">
-      <br>
-      <h4> Cryptography </h4>
-      <p>
-        A collection of both symmetric and asymmetric encryption algorithms, along with key generation for each. I started this project to better understand my cryptography unit, and it proved very helpful.
-      </p>
-    </div>
-  </body>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/styles.css" />
+	</head>
+	<body>
+		<div id="content">
+			<div id="bg"></div>
+			<div id="blur"></div>
+			<div id="overlay">
+				<svg id="overlay-svg" viewBox="0 0 100 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+					<polygon id="overlay-hexagon" class="overlay-element" points="0,1 0.866025,0.5 0.866025,-0.5 0,-1 -0.866025,-0.5 -0.866025,0.5" opacity="0" transform="scale(10)" />
+				</svg>
+			</div>
+			<div id="main">
+				<header>
+					<h1>Angus Robertson</h1>
+					<p>Software Engineer &nbsp;&bull;&nbsp; MEng Computer Science &nbsp;&bull;&nbsp; Problem Solver</p>
+					<nav>
+						<a href="/assets/AngusRobertsonCV.pdf" class="icon">
+							<img src="assets/img/documents.png" alt="CV" class="invertImg"></img>
+						</a>
+						<a href="https://github.com/GusRob" class="icon">
+							<img src="assets/img/github.png" alt="GitHub"></img>
+						</a>
+						<a href="https://www.linkedin.com/in/angus-r-a6318016a/" class="icon">
+							<img src="assets/img/linkedin.png" alt="LinkedIn"></img>
+						</a>
+						<a href="mailto:angusprobertson@gmail.com" class="icon">
+							<img src="assets/img/mail.png" alt="Email" class="invertImg"></img>
+						</a>
+					</nav>
+				</header>
+				<footer id="footer">
+					<span class="copyright">Under Development</span>
+				</footer>
+			</div>
+		</div>
+		<script src="assets/script/overlay.js"> </script>
+	</body>
 </html>
-
-
-<!--
-
- -->
